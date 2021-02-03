@@ -5,7 +5,10 @@
 package servlets;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Collection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -63,7 +66,15 @@ public class ServletUsers extends HttpServlet {
                 request.setAttribute("listeDesUsers", liste);
                 forwardTo = "index.jsp?action=listerLesUtilisateurs";
                 message = "Liste des utilisateurs";
-            } else {
+            }else if(action.equals("creerUtilisateursDeTest")){
+                creeUtilisateurDetest();
+                Collection<User> liste = Server.uh.getUsers();
+                request.setAttribute("listeDesUsers", liste);
+                forwardTo = "index.jsp?action=listerLesUtilisateurs";
+                message = "les 3 utilisateurs ont été créés !";
+            }
+            
+            else {
                 forwardTo = "index.jsp?action=todo";
                 message = "La fonctionnalité pour le paramètre " + action + " est à implémenter !";
             }
@@ -110,4 +121,17 @@ public class ServletUsers extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+private void creeUtilisateurDetest(){
+        try {
+            User user1 = new User("Youan123","Youan", "Toussaint");
+            User user2 = new User("Kone123","Hamed", "Kone");
+            User user3 = new User("Keit123","Keita", "Keita Mamady");
+            Server.uh.addUser(user1);
+            Server.uh.addUser(user2);
+            Server.uh.addUser(user3);
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(ServletUsers.class.getName()).log(Level.SEVERE, null, ex);
+        }
+}
 }
