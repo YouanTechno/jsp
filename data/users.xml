@@ -67,12 +67,6 @@
         <firstname>testz</firstname>
     </user>
     <user>
-        <id>Youan123</id>
-        <login>Youan123</login>
-        <lastname>Youan</lastname>
-        <firstname>Toussaint</firstname>
-    </user>
-    <user>
         <id>Kone123</id>
         <login>Kone123</login>
         <lastname>Hamed</lastname>
@@ -83,5 +77,23 @@
         <login>Keit123</login>
         <lastname>Keita</lastname>
         <firstname>Keita Mamady</firstname>
+    </user>
+    <user>
+        <id>karam1234</id>
+        <login>karam1234</login>
+        <lastname>Kone</lastname>
+        <firstname>karamoko</firstname>
+    </user>
+    <user>
+        <id>karam1234</id>
+        <login>karam1234</login>
+        <lastname>Kone</lastname>
+        <firstname>karamoko</firstname>
+    </user>
+    <user>
+        <id>karam1234</id>
+        <login>karam1234</login>
+        <lastname>Kone</lastname>
+        <firstname>karamoko</firstname>
     </user>
 </users>

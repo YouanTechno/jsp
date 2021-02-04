@@ -62,7 +62,16 @@
                 <input type="hidden" name="action" value="updateUtilisateur"/>
                 <input type="submit" value="Mettre à jour" name="submit"/>
             </form>
+            
+            <li>Supprimer utilisateur</li>
+            <form action="ServletUsers" method="get">
+                login : <input type="text" name="login"/><br>
+                <input type="hidden" name="action" value="supprimerUtilisateur"/>
+                <input type="submit" value="Chercher" name="submit"/>
+            </form>
         </ol>
+        
+        
 
         <!-- Fin du menu -->
 
